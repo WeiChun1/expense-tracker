@@ -1,0 +1,12 @@
+<div class="container mt-5 text-center w-50">
+  <div class="w-75 mx-auto">
+    <form action="/record/{{ record._id }}?_method=PUT" method="POST">
+      {{>input}}
+      <div class="text-center">
+        <button class="btn btn-primary" type="submit">送出</button>
+        <a type="button" class="btn btn-secondary" href="javascript:history.back()">返回前頁</a>
+        <button type="reset" class="btn btn-danger">清空欄位</button>
+      </div>
+    </form>
+  </div>
+</div>

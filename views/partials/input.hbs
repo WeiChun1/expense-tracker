@@ -1,0 +1,29 @@
+<h1 class="mb-1 show-title">新增支出</h1>
+<div class="mb-3">
+  <label for="name" class="form-label">名稱<span class="text-danger">*</span></label>
+  <input type="text" class="form-control" id="name" name="name" value="{{record.name}}" required>
+</div>
+
+<div class="mb-3">
+  <label for="categoryId" class="form-label">分類<span class="text-danger">*</span></label>
+  <select type="text" class="form-control" id="categoryId" list="categoryOptions" name="categoryId" required>
+    {{#if record}}
+      <option value="{{ record.categoryId }}" selected>{{record.categoryId.name}}</option>
+    {{else}}
+      <option disabled selected>選擇分類</option>
+    {{/if}}
+    {{#each categories}}
+      <option value="{{ this._id }}">{{ this.name }}</option>
+    {{/each}}
+
+  </select>
+</div>
+
+<div class="mb-3">
+  <label for="date" class="form-label">日期<span class="text-danger">*</span></label>
+  <input type="date" class="form-control" id="date" name="date" value="{{record.date}}" required>
+</div>
+<div class="mb-3">
+  <label for="amount" class="form-label">花費<span class="text-danger">*</span></label>
+  <input type="number" class="form-control" id="amount" name="amount" required min="0" value="{{record.amount}}">
+</div>
