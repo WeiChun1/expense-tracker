@@ -6,6 +6,10 @@ const categorySchema = new Schema({
     type: String,
     require: true
   },
+  name_en: {
+    type: String,
+    require: true
+  },
   icon: {
     type: String,
     require: true

@@ -35,7 +35,8 @@ db.once('open', () => {
   return Promise.all(categorySeed.map(category => {
     return Category.create({
       name: category.name,
-      icon: category.icon
+      icon: category.icon,
+      name_en: category.name_en
     })
   }))
   .catch(err => console.log(err))
